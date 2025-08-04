@@ -488,43 +488,8 @@ export default function MedicalFormulations() {
                 </main>
             </div>
 
-            {/* رسالة تأكيد الشراء */}
-            {showConfirmation && (
-                <div className={styles.confirmationOverlay}>
-                    <div className={styles.confirmationBox}>
-                        <div className={styles.confirmationIcon}>✓</div>
-                        <h3 className={styles.confirmationTitle}>تمت الطلبية بنجاح!</h3>
-                        <p className={styles.confirmationMessage}>{confirmationMessage}</p>
-                        <button
-                            className={styles.confirmationBtn}
-                            onClick={() => setShowConfirmation(false)}
-                        >
-                            حسناً
-                        </button>
-                    </div>
-                </div>
-            )}
 
-            {/* صفحة السلة */}
-            {showCart && (
-                <div className={styles.cartOverlay}>
-                    <div className={styles.cartBox}>
-                        <div className={styles.cartHeader}>
-                            <h3 className={styles.cartTitle}>سلة التسوق</h3>
-                            <button
-                                className={styles.closeCart}
-                                onClick={() => setShowCart(false)}
-                            >
-                                ×
-                            </button>
-                        </div>
 
-                        <div className={styles.cartItems}>
-                            {renderCartItems()}
-                        </div>
-                    </div>
-                </div>
-            )}
         </div>
     );
 }
